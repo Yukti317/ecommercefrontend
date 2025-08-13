@@ -83,6 +83,8 @@ function AdminProduct() {
             setOpensidebar(false);
             formik.resetForm();
             formik.setFieldValue("image", "");
+            setImageFile(null);
+            setUploadedUrl("")
           } else {
             toast.error(res.data.message);
             setOpensidebar(false);
@@ -146,6 +148,7 @@ function AdminProduct() {
       formik.setFieldValue("saleprice", "");
       formik.setFieldValue("image", "");
       setImageFile(null);
+      setUploadedUrl("")
     }
   }, [IsEdit, productid]);
 
